@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel ='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Car Spot</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+<div class='top'></div>
+<header>
+  {% include 'navbar.html' %}
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img class="card-img-top" src="{{ car.image_url }}" alt="{{ car.name }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-5">
+                            <h2 class="text-center">{{ car.name }}</h2>
+                            <p class="text-center">{{ car.car_status }}</p>
+                            <p class="text-center">{{ car.year}}</p>
+                            <p class="text-center">₦{{ car.price}}</p>
+                           
+                                <form method="post" action="{% url 'add_to_cart' car.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="product_id" value="{{ car.id }}">
+                                    <button type="submit" class="btn btn-primary btn-lg" style="width: 80%; background-color: #f68b1e; margin: 0 0 0 10px;">Add to Cart</button>
+                                </form>
+                          
+                            
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <p>{{ car.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

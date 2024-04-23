@@ -1,0 +1,70 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel ='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Car Spot</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+</head>
+<div class='top'></div>
+<header>
+  {% include 'navbar.html' %}
+</header>
+<body>
+    <section class="container">
+        <div class="mt-5 mb-4">
+        <div class="row" id="ads">
+        <!-- Category Card -->
+        {% for i in products %}
+        <div class="col-md-4 mb-5">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge">{{i.kms_classification}}</span>
+                    <span class="card-notify-year">{{ i.year }}</span>
+                    <img class="img-fluid" src="{{ i.image_url }}" alt="Alternate Text" />
+                </div>
+                <div class="card-image-overlay m-auto">
+                    <span class="card-detail-badge">{{i.car_status}}</span>
+                    <span class="card-detail-badge">₦{{ i.price }}</span>
+                    <span class="card-detail-badge">{{i.mileage}}km/s</span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto ">
+                        <h5>{{ i.name }}</h5>
+                    </div>
+                    <a class="ad-btn" href="{% url 'car_detail' car_id=i.id %}">View</a>
+                </div>
+                
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        </div>
+    </section>
+    <div class="wrapper">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+             </ul>
+        </nav>
+    </div>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

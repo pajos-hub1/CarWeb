@@ -1,0 +1,408 @@
+.top {
+	position: static;
+	height: 15px;
+	background-color: #f1f1f2;
+}
+header{
+	background-color: #FFFFFF;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f1f1f2;
+
+  }
+  h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 30%);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0.5rem auto;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+}
+
+.searchInputContainer {
+    position: relative;
+    flex: 5;
+}
+
+#searchQueryInput {
+    width: 100%;
+    height: 2.5rem;
+    background: #f5f5f5;
+    outline: none;
+    border: 1px solid #A3A3A6;
+    border-radius: 0.2rem;
+    padding-left: 3rem; /* Adjusted padding */
+    font-size: 1rem;
+    color: #000;
+}
+
+#searchQueryInput::placeholder {
+    color: #000;
+    font-size: 1rem;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.75rem; /* Adjusted position */
+    top: 38%;
+    transform: translateY(-50%);
+    width: 1.5rem; /* Adjusted size */
+    height: auto; /* Maintain aspect ratio */
+    fill: #666666; /* Color */
+}
+
+#searchQuerySubmit {
+    height: 2.5rem;
+    background: #f68b1e;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0 1.0rem; /* Adjust padding for button */
+    font-size: 0.8rem;
+    color: #fff;
+    cursor: pointer;
+	margin: 0 0 18px 6px;
+    transition: background-color 0.3s ease;
+}
+
+#searchQuerySubmit:hover {
+    background-color: #f68b1e;
+}
+
+
+
+
+#ads {
+    margin: 100px 0 30px 0;
+   
+}
+#ads .card-notify-badge {
+	position: absolute;
+	left: -10px;
+	top: -20px;
+	background: #f2d900;
+	text-align: center;
+	border-radius: 30px 30px 30px 30px; 
+	color: #000;
+	padding: 5px 10px;
+	font-size: 14px;
+
+}
+
+#ads .card-notify-year {
+	position: absolute;
+	right: -10px;
+	top: -20px;
+	background: #ff4444;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;      
+	font-size: 14px;      
+	width: 50px;
+	height: 50px;    
+	padding: 15px 0 0 0;
+}
+
+
+#ads .card-detail-badge {      
+	background: #f2d900;
+	text-align: center;
+	border-radius: 30px 30px 30px 30px;
+	color: #000;
+	padding: 5px 10px;
+	font-size: 14px;        
+}
+
+
+
+#ads .card:hover {
+		background: #fff;
+		box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+#ads .card-image-overlay {
+	font-size: 20px;
+	
+}
+
+#ads .card-image-overlay span {
+		display: inline-block;              
+	}
+#ads .card-image img{
+		object-fit: cover;
+		width: 100%;
+		height: 200px;
+		transition: 0.3s ease-in-out;
+}
+#ads .card-image img:hover{
+	transform: scale(1.1);
+}
+
+#ads .ad-btn {
+	text-transform: uppercase;
+	width: 150px;
+	height: 40px;
+	border-radius: 80px;
+	font-size: 16px;
+	line-height: 35px;
+	text-align: center;
+	border: 3px solid #e6de08;
+	display: block;
+	text-decoration: none;
+	margin: 20px auto 1px auto;
+	color: #000;
+	overflow: hidden;        
+	position: relative;
+	background-color: #e6de08;
+}
+
+#ads .ad-btn:hover {
+		background-color: #e6de08;
+		color: #1e1717;
+		border: 2px solid #e6de08;
+		background: transparent;
+		transition: all 0.3s ease;
+		box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+	}
+
+#ads .ad-title h5 {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.login-log{
+	font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    text-align: center; /* Center-align content */
+	margin-top: 50px;
+}
+.login {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.logo {
+    width: 100px; /* Adjust logo size */
+    margin-bottom: 20px;
+}
+
+.welcome {
+    font-weight: bold;
+	font-size: 120%;
+
+}
+
+.input-box {
+	position: relative;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #ccc; /* Default border color */
+	border-radius: 5px;
+	outline: none;
+	transition: border-color 0.2s; /* Transition for border color change */
+	margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+	border-color: #F9A64A; /* Border color on focus */
+}
+
+input[type="text"]:hover {
+	border-color: #999; /* Border color on hover */
+}
+
+/* Placeholder style */
+input[type="text"]::placeholder {
+	color: #999; /* Placeholder color */
+	transition: top 0.3s, color 0.3s; /* Transition for placeholder animation */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+	font-size: 16px;
+	pointer-events: none;
+}
+
+input[type="text"]:focus::placeholder, input[type="text"]:valid::placeholder {
+	top: -10px; /* Move placeholder up on focus or when text is entered */
+	font-size: 12px; /* Decrease font size when placeholder moves up */
+	color: #F9A64A; /* Placeholder color on focus or when text is entered */
+}
+
+input[type="text"]:focus + .placeholder-label {
+	top: -10px; /* Move placeholder up on focus */
+	font-size: 12px; /* Decrease font size when placeholder moves up */
+	color: #F9A64A; /* Placeholder color on focus */
+}
+
+.placeholder-label {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+	font-size: 16px;
+	pointer-events: none;
+	z-index: -1;
+	transition: top 0.3s, font-size 0.3s, color 0.3s; /* Transition for placeholder animation */
+}
+
+input[type="text"]:focus {
+	border-color: #F9A64A; /* Border color on focus */
+}
+.continue-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8982d; /* Blue color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+	margin-bottom: 5px ;
+	font-weight: bold;
+}
+
+.continue-btn:hover {
+    background-color: #F9A64A; /* Darker blue color on hover */
+}
+
+.terms {
+    margin-bottom: 20px;
+	font-size: 70%;
+}
+
+.terms a {
+    color: #F9A64A;
+	text-decoration: underline;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.google-btn {
+    background-color: #db4437; /* Red color for Google button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.google-btn:hover {
+    background-color: #c13500; /* Darker red color on hover */
+}
+
+.support {
+    margin-top: 20px;
+}
+
+.support-logo {
+    width: 80px; /* Adjust support logo size */
+    margin-top: 20px;
+}
+
+/* Style for username box */
+.username-box {
+    background-color: #eeeeee; /* Background color */
+    color: #000000; /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style for username content */
+.username-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for username */
+.username {
+    margin-right: 10px;
+}
+
+/* Style for edit link */
+.edit-link {
+    color: #f8982d; /* Edit link color */
+    text-decoration: none;
+}
+
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #ccc; /* Default border color */
+	border-radius: 5px;
+	outline: none;
+	transition: border-color 0.2s; /* Transition for border color change */
+	margin-bottom: 20px;
+}
+input[type="password"]:focus {
+	border-color: #F9A64A; /* Border color on focus */
+}
+
+input[type="password"]:focus {
+	border-color: #F9A64A; /* Border color on focus */
+}
+input[type="password"]:hover {
+	border-color: #999; /* Border color on hover */
+}
+input[type="password"]::placeholder {
+	color: #999; /* Placeholder color */
+	transition: top 0.3s, color 0.3s; /* Transition for placeholder animation */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+	font-size: 16px;
+	pointer-events: none;
+}
+
+input[type="password"]:focus::placeholder, input[type="password"]:valid::placeholder {
+	top: -30px; /* Move placeholder up on focus or when text is entered */
+	font-size: 12px; /* Decrease font size when placeholder moves up */
+	color: #F9A64A; /* Placeholder color on focus or when text is entered */
+}
+
+footer{
+	background: #007bff;
+	background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+
+.container {
+    margin-top: 50px;
+}
